@@ -7,10 +7,10 @@ async function checkWebsiteStatus(url) {
         if (response.status === 200) {
             return { status: 'UP', message: '> @everyone Website is up and running smoothly 🟢 ||https://gmpsankalpa.xyz||' };
         } else {
-            return { status: 'DOWN', message: '> @💮 DEVELOPER  Website may be down 🔴, status code: ${response.status}' };
+            return { status: 'DOWN', message: '> @💮DEVELOPER  Website may be down 🔴, status code: ${response.status}' };
         }
     } catch (error) {
-        return { status: 'ERROR', message: '> @💮 DEVELOPER  Error checking website status 🛑 ||https://gmpsankalpa.xyz||' };
+        return { status: 'ERROR', message: '> @💮DEVELOPER  Error checking website status 🛑 ||https://gmpsankalpa.xyz||' };
     }
 }
 
