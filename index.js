@@ -5,7 +5,7 @@ async function checkWebsiteStatus(url) {
     try {
         const response = await axios.get(url);
         if (response.status === 200) {
-            return { status: 'UP', message: '> @everyone Website is up and running smoothly 🟢 ||https://gmpsankalpa.xyz||' };
+            return { status: 'UP', message: '> ||@Admin|| Website is up and running smoothly 🟢 ||https://gmpsankalpa.xyz||' };
         } else {
             return { status: 'DOWN', message: '> ||@Admin|| Website may be down 🔴, status code: ${response.status}' };
         }
