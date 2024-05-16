@@ -7,10 +7,10 @@ async function checkWebsiteStatus(url) {
         if (response.status === 200) {
             return { status: 'UP', message: '> @everyone Website is up and running smoothly 🟢 ||https://gmpsankalpa.xyz||' };
         } else {
-            return { status: 'DOWN', message: '> @Admin Website may be down 🔴, status code: ${response.status}' };
+            return { status: 'DOWN', message: '> ||@Admin|| Website may be down 🔴, status code: ${response.status}' };
         }
     } catch (error) {
-        return { status: 'ERROR', message: '> @Admin  Error checking website status 🛑 ||https://gmpsankalpa.xyz||' };
+        return { status: 'ERROR', message: '> ||@Admin|| Error checking website status 🛑 ||https://gmpsankalpa.xyz||' };
     }
 }
 
@@ -34,5 +34,5 @@ async function main() {
     await sendToDiscordWebhook(discordWebhookUrl, `**Website Status: ${status}\n${message}**`);
 }
 
-// Run main function every 1 minute
-setInterval(main, 60000); // 60000 milliseconds = 1 minute
+// Run main function every 1 hour
+setInterval(main, 3600000); // 3600000 milliseconds = 1 hour
