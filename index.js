@@ -5,12 +5,12 @@ async function checkWebsiteStatus(url) {
     try {
         const response = await axios.get(url);
         if (response.status === 200) {
-            return { status: 'UP', message: '> ||@Admin|| Website is up and running smoothly 🟢 ||https://gmpsankalpa.xyz||' };
+            return { status: 'UP', message: '> @here Website is up and running smoothly 🟢 ||https://gmpsankalpa.xyz||' };
         } else {
-            return { status: 'DOWN', message: '> ||@Admin|| Website may be down 🔴, status code: ${response.status}' };
+            return { status: 'DOWN', message: '> @here Website may be down 🔴, status code: ${response.status}' };
         }
     } catch (error) {
-        return { status: 'ERROR', message: '> ||@Admin|| Error checking website status 🛑 ||https://gmpsankalpa.xyz||' };
+        return { status: 'ERROR', message: '> @here Error checking website status 🛑 ||https://gmpsankalpa.xyz||' };
     }
 }
 
